@@ -6,11 +6,12 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 16:50:25 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/11 22:54:00 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/19 07:09:14 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -21,5 +22,5 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		s1++;
 		s2++;
 	}
-	return (*s1 - *s2);
+	return (*((unsigned char *)s1) - *((unsigned char *)s2));
 }
