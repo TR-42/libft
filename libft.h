@@ -6,7 +6,7 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 13:37:46 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/12 00:43:54 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/18 06:34:58 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,21 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 int		ft_atoi(const char *str);
+
+// Libft-02 (Libc functions)
+void	*ft_calloc(size_t count, size_t size);
+
+char	*ft_strdup(const char *s1);
+
+// Libft-02 (Additional functions)
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+
+char	*ft_strjoin(char const *s1, char const *s2);
+
+char	*ft_strtrim(char const *s1, char const *set);
+
+char	**ft_split(char const *s, char c);
+
+char	*ft_itoa(int n);
 
 #endif
