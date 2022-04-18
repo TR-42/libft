@@ -6,7 +6,7 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 16:52:48 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/11 23:47:39 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/12 01:09:59 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,5 +83,5 @@ static long	ft_strtol(const char *str, char **endptr, int base)
 
 int	ft_atoi(const char *str)
 {
-	return (ft_strtol(str, NULL, 10));
+	return ((int)ft_strtol(str, NULL, 10));
 }
