@@ -6,34 +6,47 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 16:52:48 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/12 01:09:59 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/19 06:57:41 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include <limits.h>
 
-static int	ft_isspace(int c)
+static int	get_36based_value(char c)
 {
-	return (c == '\t' || c == '\n' || c == '\v'
-		|| c == '\f' || c == '\r' || c == ' ');
+	if ('0' <= c && c <= '9')
+		return (c - '0');
+	else if ('a' <= c && c <= 'z')
+		return (c - 'a' + 10);
+	else if ('A' <= c && c <= 'Z')
+		return (c - 'A' + 10);
+	else
+		return (-1);
 }
 
-static int	set_value(const char *c, long *p_value, int sign, int base)
+static int	set_value(char c, long *p_value, int sign, int base)
 {
-	int	num_value;
+	int		num_value;
+	long	value_tmp;
 
-	if ('0' <= *c && *c <= '9')
-		num_value = *c - '0';
-	else if ('a' <= *c && *c <= 'z')
-		num_value = *c - 'a' + 10;
-	else if ('A' <= *c && *c <= 'Z')
-		num_value = *c - 'A' + 10;
-	else
-		num_value = -1;
+	num_value = get_36based_value(c);
 	if (num_value < 0 || base <= num_value)
 		return (0 == 1);
-	*p_value = ((*p_value) * base) + (num_value * sign);
-	return (0 == 0);
+	num_value *= sign;
+	value_tmp = (*p_value) * base;
+	if (sign > 0 && (((LONG_MAX / base) < *p_value)
+			|| ((LONG_MAX - value_tmp) < num_value)))
+		*p_value = LONG_MAX;
+	else if (sign < 0 && (((LONG_MIN / base) > *p_value)
+			|| ((LONG_MIN - value_tmp) > num_value)))
+		*p_value = LONG_MIN;
+	else
+	{
+		*p_value = value_tmp + num_value;
+		return (0 == 0);
+	}
+	return (0 == 1);
 }
 
 static int	get_base(const char **p_str, const int base)
@@ -64,7 +77,7 @@ static long	ft_strtol(const char *str, char **endptr, int base)
 		*endptr = (char *)str;
 	if (!((2 <= base && base <= 36) || base == 0))
 		return (0);
-	while (ft_isspace(*str) && *str != '\0')
+	while (((9 <= *str && *str <= 13) || *str == ' ') && *str != '\0')
 		str++;
 	if (*str == '-')
 		sign = -1;
@@ -74,7 +87,7 @@ static long	ft_strtol(const char *str, char **endptr, int base)
 	if (*str == '+' || *str == '-')
 		str++;
 	base = get_base(&str, base);
-	while (set_value(str, &value, sign, base))
+	while (set_value(*str, &value, sign, base))
 		str++;
 	if (endptr != NULL)
 		*endptr = (char *)str;
