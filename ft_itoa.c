@@ -6,7 +6,7 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 06:34:36 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/19 05:50:12 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/19 07:40:02 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ static char	*reverse_str(char *str)
 	char	*str_end;
 	char	tmp;
 
+	if (str == NULL)
+		return (NULL);
 	str_top = str;
 	str_end = str;
 	while (*str_end != '\0')
