@@ -6,7 +6,7 @@
 #    By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 06:23:32 by kfujita           #+#    #+#              #
-#    Updated: 2022/04/19 06:29:08 by kfujita          ###   ########.fr        #
+#    Updated: 2022/04/20 00:45:02 by kfujita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,18 @@ SRCS	=	ft_atoi.c \
 			ft_strsteri.c \
 			ft_tolower.c \
 
+SRCS04	=	ft_lstnew.c \
+			ft_lstadd_front.c \
+			ft_lstsize.c \
+			ft_lstlast.c \
+			ft_lstadd_back.c \
+			ft_lstdelone.c \
+			ft_lstclear.c \
+			ft_lstiter.c \
+			ft_lstmap.c \
+
 OBJS	=	$(SRCS:.c=.o)
+OBJS04	=	$(SRCS04:.c=.o)
 
 CFLAGS	=	-Wall -Wextra -Werror
 
@@ -55,11 +66,13 @@ CC		=	cc
 
 all:	$(NAME)
 
-$(NAME):	$(OBJS)
+$(NAME):	$(OBJS) $(OBJS04)
 	ar r $@ $^
 
+bonus:	$(NAME)
+
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(OBJS04)
 
 fclean:	clean
 	rm -f $(NAME)
