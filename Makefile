@@ -6,7 +6,7 @@
 #    By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 06:23:32 by kfujita           #+#    #+#              #
-#    Updated: 2022/04/20 22:31:38 by kfujita          ###   ########.fr        #
+#    Updated: 2022/04/21 01:46:33 by kfujita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,8 @@ SRCS	=	ft_atoi.c \
 			ft_striteri.c \
 			ft_tolower.c \
 
-OBJS	=	$(SRCS:.c=.o)
+OBJ_DIR	=	./obj
+OBJS	=	$(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
 
 CFLAGS	=	-Wall -Wextra -Werror
 
@@ -58,8 +59,13 @@ all:	$(NAME)
 $(NAME):	$(OBJS)
 	ar r $@ $^
 
+$(OBJ_DIR)/%.o:	%.c
+	@mkdir -p $(OBJ_DIR)
+	$(CC) $(CFLAGS) -c -o $@ $^
+
 clean:
 	rm -f $(OBJS)
+	rmdir $(OBJ_DIR) || exit 0
 
 fclean:	clean
 	rm -f $(NAME)
