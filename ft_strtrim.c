@@ -6,14 +6,14 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 05:00:01 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/18 21:04:17 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/20 20:42:52 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-static size_t	getSmaller(size_t v1, size_t v2)
+static size_t	get_smaller(size_t v1, size_t v2)
 {
 	if (v1 < v2)
 		return (v1);
@@ -29,7 +29,7 @@ static char	*ft_strndup(const char *s1, size_t n)
 
 	if (n <= 0)
 		return (ft_strdup(""));
-	s1_len = getSmaller(ft_strlen(s1), n);
+	s1_len = get_smaller(ft_strlen(s1), n);
 	p_ret = (char *)malloc(s1_len + 1);
 	p_ret_top = p_ret;
 	if (p_ret == NULL)
