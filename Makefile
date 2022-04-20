@@ -6,7 +6,7 @@
 #    By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 06:23:32 by kfujita           #+#    #+#              #
-#    Updated: 2022/04/19 06:29:08 by kfujita          ###   ########.fr        #
+#    Updated: 2022/04/20 22:31:38 by kfujita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,7 @@ SRCS	=	ft_atoi.c \
 			ft_strdup.c \
 			ft_strlcpy.c \
 			ft_strncmp.c \
-			ft_strsteri.c \
+			ft_striteri.c \
 			ft_tolower.c \
 
 OBJS	=	$(SRCS:.c=.o)
