@@ -47,8 +47,19 @@ SRCS	=	ft_atoi.c \
 			ft_striteri.c \
 			ft_tolower.c \
 
+SRCS04	=	ft_lstnew.c \
+			ft_lstadd_front.c \
+			ft_lstsize.c \
+			ft_lstlast.c \
+			ft_lstadd_back.c \
+			ft_lstdelone.c \
+			ft_lstclear.c \
+			ft_lstiter.c \
+			ft_lstmap.c \
+
 OBJ_DIR	=	./obj
 OBJS	=	$(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
+OBJS04	=	$(addprefix $(OBJ_DIR)/, $(SRCS04:.c=.o))
 
 CFLAGS	=	-Wall -Wextra -Werror
 
@@ -56,12 +67,14 @@ CC		=	cc
 
 all:	$(NAME)
 
-$(NAME):	$(OBJS)
+$(NAME):	$(OBJS) $(OBJS04)
 	ar r $@ $^
 
 $(OBJ_DIR)/%.o:	%.c
 	@mkdir -p $(OBJ_DIR)
 	$(CC) $(CFLAGS) -c -o $@ $^
+
+bonus:	$(NAME)
 
 clean:
 	rm -f $(OBJS)
