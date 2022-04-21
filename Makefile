@@ -6,7 +6,7 @@
 #    By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 06:23:32 by kfujita           #+#    #+#              #
-#    Updated: 2022/04/21 01:46:33 by kfujita          ###   ########.fr        #
+#    Updated: 2022/04/21 21:02:28 by kfujita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,7 +74,7 @@ $(OBJ_DIR)/%.o:	%.c
 	@mkdir -p $(OBJ_DIR)
 	$(CC) $(CFLAGS) -c -o $@ $^
 
-bonus:	$(NAME)
+# bonus:	$(NAME)
 
 clean:
 	rm -f $(OBJS)
