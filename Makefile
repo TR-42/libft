@@ -6,7 +6,7 @@
 #    By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 06:23:32 by kfujita           #+#    #+#              #
-#    Updated: 2022/04/21 21:09:04 by kfujita          ###   ########.fr        #
+#    Updated: 2022/04/21 21:09:42 by kfujita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,7 +78,7 @@ $(OBJ_DIR)/%.o:	%.c
 
 clean:
 	rm -f $(OBJS) $(OBJS04)
-	rmdir $(OBJ_DIR) || exit 0
+	rm -d $(OBJ_DIR) || exit 0
 
 fclean:	clean
 	rm -f $(NAME)
