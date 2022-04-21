@@ -74,7 +74,7 @@ $(OBJ_DIR)/%.o:	%.c
 	@mkdir -p $(OBJ_DIR)
 	$(CC) $(CFLAGS) -c -o $@ $^
 
-# bonus:	$(NAME)
+bonus:	$(NAME)
 
 clean:
 	rm -f $(OBJS) $(OBJS04)
