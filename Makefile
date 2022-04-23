@@ -58,6 +58,7 @@ SRCS04	=	ft_lstnew.c \
 			ft_lstmap.c \
 
 SRCS_AD	=	ft_strtol.c \
+			ft_strndup.c \
 			ft_strnlen.c \
 			ft_min.c \
 			ft_max.c \
