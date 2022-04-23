@@ -95,6 +95,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 // Additional Functions (from libc)
 long	ft_strtol(const char *str, char **endptr, int base);
+size_t	ft_strnlen(const char *str, size_t max_len);
 
 // Additional Functions (original)
 int		ft_min(int a, int b);

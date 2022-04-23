@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strnlen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/19 07:57:56 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/23 22:45:21 by kfujita          ###   ########.fr       */
+/*   Created: 2022/04/23 22:43:26 by kfujita           #+#    #+#             */
+/*   Updated: 2022/04/23 22:44:16 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <limits.h>
+#include <stddef.h>
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+size_t	ft_strnlen(const char *str, size_t max_len)
 {
-	size_t	length;
+	size_t	len;
 
-	if (s == NULL)
-		return ;
-	while (*s != '\0')
+	len = 0;
+	while (len < max_len && *str != '\0')
 	{
-		length = ft_strnlen(s, INT_MAX);
-		write(fd, s, length);
-		s += length;
+		str++;
+		len++;
 	}
+	return (len);
 }
