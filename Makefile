@@ -6,7 +6,7 @@
 #    By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 06:23:32 by kfujita           #+#    #+#              #
-#    Updated: 2022/04/23 22:48:18 by kfujita          ###   ########.fr        #
+#    Updated: 2022/04/23 22:51:02 by kfujita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,6 +58,8 @@ SRCS04	=	ft_lstnew.c \
 			ft_lstmap.c \
 
 SRCS_AD	=	ft_strtol.c \
+			ft_min.c \
+			ft_max.c \
 
 OBJ_DIR	=	./obj
 OBJS	=	$(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
