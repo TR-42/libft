@@ -6,12 +6,12 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 22:31:15 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/23 22:38:28 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/26 00:19:03 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-#include "libft.h"
+#include "ft_math.h"
 
 int	ft_max(int a, int b)
 {

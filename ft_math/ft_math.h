@@ -1,46 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_min.c                                           :+:      :+:    :+:   */
+/*   ft_math.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/23 22:31:15 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/23 22:39:05 by kfujita          ###   ########.fr       */
+/*   Created: 2022/04/26 00:18:17 by kfujita           #+#    #+#             */
+/*   Updated: 2022/04/26 00:18:50 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include "libft.h"
+#ifndef FT_MATH_H
+# define FT_MATH_H
 
-int	ft_min(int a, int b)
-{
-	if (a < b)
-		return (a);
-	else
-		return (b);
-}
+int		ft_min(int a, int b);
+long	ft_minl(long a, long b);
+size_t	ft_minp(size_t a, size_t b);
+double	ft_minf(double a, double b);
 
-long	ft_minl(long a, long b)
-{
-	if (a < b)
-		return (a);
-	else
-		return (b);
-}
+int		ft_max(int a, int b);
+long	ft_maxl(long a, long b);
+size_t	ft_maxp(size_t a, size_t b);
+double	ft_maxf(double a, double b);
 
-size_t	ft_minp(size_t a, size_t b)
-{
-	if (a < b)
-		return (a);
-	else
-		return (b);
-}
-
-double	ft_minf(double a, double b)
-{
-	if (a < b)
-		return (a);
-	else
-		return (b);
-}
+#endif

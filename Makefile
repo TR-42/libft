@@ -6,7 +6,7 @@
 #    By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 06:23:32 by kfujita           #+#    #+#              #
-#    Updated: 2022/04/26 00:10:23 by kfujita          ###   ########.fr        #
+#    Updated: 2022/04/26 00:19:49 by kfujita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -82,6 +82,7 @@ SRCS	= \
 	get_numstr_base.c \
 
 FT_IS_DIR	=	./ft_is
+FT_MATH_DIR	=	./ft_math
 FT_MEM_DIR	=	./ft_mem
 SRCS04_DIR	=	./ft_lst
 PRINTF_DIR	=	./ft_printf
@@ -92,7 +93,7 @@ OBJ_DIR	=	./obj
 OBJS	=	$(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
 DEPS	=	$(addprefix $(OBJ_DIR)/, $(SRCS:.c=.d))
 
-VPATH	=	$(FT_IS_DIR):$(FT_MEM_DIR):$(SRCS04_DIR):$(PRINTF_DIR):$(FT_PUT_DIR):$(STR_DIR)
+VPATH	=	$(FT_IS_DIR):$(FT_MATH_DIR):$(FT_MEM_DIR):$(SRCS04_DIR):$(PRINTF_DIR):$(FT_PUT_DIR):$(STR_DIR)
 
 CFLAGS	=	-Wall -Wextra -Werror -MMD
 
