@@ -6,11 +6,12 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 16:51:43 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/11 22:57:35 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/25 23:42:00 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include "ft_mem.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

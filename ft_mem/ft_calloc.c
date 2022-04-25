@@ -6,13 +6,12 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 03:15:08 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/19 23:37:06 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/25 23:41:35 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_mem.h"
 #include <stdlib.h>
-#include <limits.h>
 
 void	*ft_calloc(size_t count, size_t size)
 {
