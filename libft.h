@@ -6,7 +6,7 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 13:37:46 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/23 23:05:01 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/25 21:51:43 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 // Dependency:
 // - size_t
 # include <stddef.h>
+
+// printf
+# include "ft_printf/ft_printf.h"
 
 // Libft-04
 typedef struct s_list
