@@ -6,7 +6,7 @@
 #    By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 06:23:32 by kfujita           #+#    #+#              #
-#    Updated: 2022/04/25 23:53:07 by kfujita          ###   ########.fr        #
+#    Updated: 2022/04/25 23:58:10 by kfujita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -94,11 +94,10 @@ OBJS	=	$(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
 VPATH	=	$(FT_IS_DIR):$(FT_MEM_DIR):$(SRCS04_DIR):$(PRINTF_DIR):$(FT_PUT_DIR):$(STR_DIR)
 
 CFLAGS	=	-Wall -Wextra -Werror
-INCLUDES	=	-I ./ -I $(PRINTF_DIR)
 
 CC		=	cc
 
-MAKE_OBJ_CMD	=	$(CC) $(CFLAGS) $(INCLUDES) -c -o $@ $^
+MAKE_OBJ_CMD	=	$(CC) $(CFLAGS) -c -o $@ $^
 
 all:	$(NAME)
 
