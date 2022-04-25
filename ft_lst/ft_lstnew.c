@@ -6,12 +6,12 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 00:41:10 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/20 01:11:40 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/25 22:57:52 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
+#include "ft_lst.h"
 
 t_list	*ft_lstnew(void *content)
 {

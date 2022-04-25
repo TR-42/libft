@@ -6,7 +6,7 @@
 #    By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 06:23:32 by kfujita           #+#    #+#              #
-#    Updated: 2022/04/25 22:53:06 by kfujita          ###   ########.fr        #
+#    Updated: 2022/04/25 22:59:40 by kfujita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,7 @@ SRCS	=	ft_atoi.c \
 			ft_striteri.c \
 			ft_tolower.c \
 
+SRCS04_DIR	=	./ft_lst
 SRCS04	=	ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstsize.c \
@@ -99,6 +100,10 @@ $(NAME):	$(OBJS) $(OBJS04) $(OBJS_AD) $(OBJS_PRINTF)
 	ar r $@ $^
 
 $(OBJ_DIR)/%.o:	%.c
+	@mkdir -p $(OBJ_DIR)
+	$(MAKE_OBJ_CMD)
+
+$(OBJ_DIR)/%.o:	$(SRCS04_DIR)/%.c
 	@mkdir -p $(OBJ_DIR)
 	$(MAKE_OBJ_CMD)
 
