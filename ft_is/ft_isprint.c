@@ -6,9 +6,11 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 19:24:15 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/06 19:24:15 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/26 00:11:02 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_is.h"
 
 int	ft_isprint(int c)
 {

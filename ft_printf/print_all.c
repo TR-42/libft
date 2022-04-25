@@ -6,12 +6,13 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 01:13:22 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/24 07:37:51 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/26 00:22:45 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "ft_printf_local.h"
+#include "../ft_math/ft_math.h"
 
 // STDOUT_FILENO
 #define DST_FD (1)

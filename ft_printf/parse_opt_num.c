@@ -6,11 +6,12 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 02:42:54 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/24 09:25:55 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/26 00:22:11 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf_local.h"
+#include "../ft_string/ft_string.h"
 
 static int	calc_num_len(long num, int base, t_fmt *p_ret)
 {

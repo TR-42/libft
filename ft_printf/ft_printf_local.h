@@ -6,7 +6,7 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 00:04:40 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/25 22:52:38 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/26 00:12:06 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stddef.h>
 # include <stdbool.h>
 # include <stdarg.h>
-# include "../libft.h"
+# include "../ft_lst/ft_lst.h"
 
 // 2 + 16 + 1
 # define STR_BUF_LEN (19)

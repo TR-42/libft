@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parse_opt_bonus.c                                  :+:      :+:    :+:   */
+/*   parse_opt.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 01:27:16 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/24 05:19:24 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/26 00:23:37 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf_local.h"
+#include "../ft_mem/ft_mem.h"
+#include "../ft_math/ft_math.h"
 
 t_fmt	*parse_opt(size_t *len, char **fmt, va_list *args)
 {

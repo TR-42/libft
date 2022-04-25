@@ -6,11 +6,12 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 02:44:07 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/24 04:40:30 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/26 00:21:55 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf_local.h"
+#include "../ft_string/ft_string.h"
 
 const char *const	g_NULLSTR = "(null)";
 

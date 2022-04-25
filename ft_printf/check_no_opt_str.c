@@ -6,7 +6,7 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 03:07:49 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/24 05:19:34 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/26 00:21:26 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include "ft_printf_local.h"
+#include "../ft_mem/ft_mem.h"
+#include "../ft_math/ft_math.h"
 
 t_fmt	*check_no_opt_str(size_t *len, char **fmt, t_fmt *p_ret)
 {

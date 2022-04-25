@@ -6,13 +6,14 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 22:40:31 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/25 23:29:37 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/26 00:24:59 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include <stdlib.h>
-#include "../libft.h"
+#include "../ft_math/ft_math.h"
+#include "ft_string.h"
 
 char	*ft_strndup(const char *s1, size_t n)
 {

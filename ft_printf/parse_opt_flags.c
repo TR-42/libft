@@ -1,17 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parse_opt_flags_bonus.c                            :+:      :+:    :+:   */
+/*   parse_opt_flags.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 03:37:57 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/24 07:39:39 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/26 00:24:01 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <limits.h>
 #include "ft_printf_local.h"
+#include "../ft_is/ft_is.h"
+#include "../ft_string/ft_string.h"
 
 static void	parse_opt_flag_dot(char **fmt, t_fmt *p_ret)
 {

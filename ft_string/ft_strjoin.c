@@ -6,11 +6,12 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 04:49:14 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/25 23:27:59 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/26 00:15:06 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../ft_mem/ft_mem.h"
+#include "ft_string.h"
 #include <stdlib.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
