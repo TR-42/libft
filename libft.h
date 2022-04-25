@@ -6,7 +6,7 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 13:37:46 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/25 21:51:43 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/25 22:51:51 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 // Dependency:
 // - size_t
 # include <stddef.h>
+
+// - bool
+# include <stdbool.h>
 
 // printf
 # include "ft_printf/ft_printf.h"
@@ -114,5 +117,7 @@ int		ft_max(int a, int b);
 long	ft_maxl(long a, long b);
 size_t	ft_maxp(size_t a, size_t b);
 double	ft_maxf(double a, double b);
+
+int		get_numstr_base(char *buf, size_t num, int base, bool is_upper);
 
 #endif

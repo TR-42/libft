@@ -6,7 +6,7 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 00:04:40 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/24 05:19:14 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/25 22:52:38 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stddef.h>
 # include <stdbool.h>
 # include <stdarg.h>
-# include <libft.h>
+# include "../libft.h"
 
 // 2 + 16 + 1
 # define STR_BUF_LEN (19)
@@ -62,8 +62,6 @@ typedef struct s_printf_fmt
 	bool	f_space:	1;
 	bool	f_plus:		1;
 }	t_fmt;
-
-int		get_numstr_base(char *buf, size_t num, int base, bool is_upper);
 
 t_list	*parse_format(const char *fmt, va_list *args);
 

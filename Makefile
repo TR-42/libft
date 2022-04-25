@@ -6,7 +6,7 @@
 #    By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 06:23:32 by kfujita           #+#    #+#              #
-#    Updated: 2022/04/25 21:58:56 by kfujita          ###   ########.fr        #
+#    Updated: 2022/04/25 22:53:06 by kfujita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,6 +64,7 @@ SRCS_AD	=	ft_strtol.c \
 			ft_max.c \
 			ft_isupper.c \
 			ft_islower.c \
+			get_numstr_base.c \
 
 PRINTF_DIR	=	./ft_printf
 SRCS_PRINTF	= \
@@ -75,7 +76,6 @@ SRCS_PRINTF	= \
 	parse_opt_num.c \
 	parse_opt_ptr.c \
 	print_all.c \
-	util.c \
 	is_valid_flag_char.c \
 	parse_opt.c \
 	parse_opt_flags.c \

@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   util.c                                             :+:      :+:    :+:   */
+/*   get_numstr_base.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 02:10:07 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/23 23:01:27 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/25 22:51:06 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf_local.h"
+#include <stdbool.h>
+#include <stddef.h>
+#include "libft.h"
 
 int	get_numstr_base(char *buf, size_t num, int base, bool is_upper)
 {
