@@ -6,7 +6,7 @@
 #    By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 06:23:32 by kfujita           #+#    #+#              #
-#    Updated: 2022/04/25 23:10:39 by kfujita          ###   ########.fr        #
+#    Updated: 2022/04/25 23:19:59 by kfujita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -93,6 +93,8 @@ OBJS_PRINTF	=	$(addprefix $(OBJ_DIR)/, $(SRCS_PRINTF:.c=.o))
 
 OBJS_IN_LIBFT	=	$(OBJS) $(OBJS_FT_IS) $(OBJS04) $(OBJS_AD) $(OBJS_PRINTF)
 
+VPATH	=	$(FT_IS_DIR):$(SRCS04_DIR):$(PRINTF_DIR)
+
 CFLAGS	=	-Wall -Wextra -Werror
 INCLUDES	=	-I ./ -I $(PRINTF_DIR)
 
@@ -106,18 +108,6 @@ $(NAME):	$(OBJS_IN_LIBFT)
 	ar r $@ $^
 
 $(OBJ_DIR)/%.o:	%.c
-	@mkdir -p $(OBJ_DIR)
-	$(MAKE_OBJ_CMD)
-
-$(OBJ_DIR)/%.o:	$(FT_IS_DIR)/%.c
-	@mkdir -p $(OBJ_DIR)
-	$(MAKE_OBJ_CMD)
-
-$(OBJ_DIR)/%.o:	$(SRCS04_DIR)/%.c
-	@mkdir -p $(OBJ_DIR)
-	$(MAKE_OBJ_CMD)
-
-$(OBJ_DIR)/%.o:	$(PRINTF_DIR)/%.c
 	@mkdir -p $(OBJ_DIR)
 	$(MAKE_OBJ_CMD)
 
