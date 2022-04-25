@@ -6,12 +6,12 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 08:00:42 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/19 08:04:26 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/25 23:52:18 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-#include "libft.h"
+#include "../libft.h"
 
 #define NUM_STR_BUF_LEN (12)
 

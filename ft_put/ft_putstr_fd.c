@@ -6,13 +6,13 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 07:57:56 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/23 22:45:21 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/25 23:52:33 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <limits.h>
-#include "libft.h"
+#include "../libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

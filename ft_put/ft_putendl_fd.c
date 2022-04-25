@@ -6,11 +6,11 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 07:59:30 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/19 08:00:12 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/25 23:52:07 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_put.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {

@@ -6,7 +6,7 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 13:37:46 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/25 23:42:50 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/25 23:53:34 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,18 +29,15 @@
 // printf
 # include "ft_printf/ft_printf.h"
 
+// ft_put*
+# include "ft_put/ft_put.h"
+
 // string
 # include "ft_string/ft_string.h"
 
 // Libft-01
 int		ft_toupper(int c);
 int		ft_tolower(int c);
-
-// libft-03
-void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char *s, int fd);
-void	ft_putendl_fd(char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
 
 // Additional Functions (from libc)
 
