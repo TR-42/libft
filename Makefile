@@ -6,7 +6,7 @@
 #    By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 06:23:32 by kfujita           #+#    #+#              #
-#    Updated: 2022/04/25 23:58:10 by kfujita          ###   ########.fr        #
+#    Updated: 2022/04/26 00:10:23 by kfujita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -90,14 +90,15 @@ STR_DIR		=	./ft_string
 
 OBJ_DIR	=	./obj
 OBJS	=	$(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
+DEPS	=	$(addprefix $(OBJ_DIR)/, $(SRCS:.c=.d))
 
 VPATH	=	$(FT_IS_DIR):$(FT_MEM_DIR):$(SRCS04_DIR):$(PRINTF_DIR):$(FT_PUT_DIR):$(STR_DIR)
 
-CFLAGS	=	-Wall -Wextra -Werror
+CFLAGS	=	-Wall -Wextra -Werror -MMD
 
 CC		=	cc
 
-MAKE_OBJ_CMD	=	$(CC) $(CFLAGS) -c -o $@ $^
+MAKE_OBJ_CMD	=	$(CC) $(CFLAGS) -c -o $@ $<
 
 all:	$(NAME)
 
@@ -111,12 +112,14 @@ $(OBJ_DIR)/%.o:	%.c
 bonus:	$(NAME)
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(DEPS)
 	rm -d $(OBJ_DIR) || exit 0
 
 fclean:	clean
 	rm -f $(NAME)
 
 re:	fclean all
+
+-include $(DEPS)
 
 .PHONY:	clean
