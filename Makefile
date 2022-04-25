@@ -6,7 +6,7 @@
 #    By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 06:23:32 by kfujita           #+#    #+#              #
-#    Updated: 2022/04/25 23:35:59 by kfujita          ###   ########.fr        #
+#    Updated: 2022/04/25 23:43:27 by kfujita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,6 @@ SRCS04	=	ft_lstnew.c \
 
 SRCS_AD	=	ft_min.c \
 			ft_max.c \
-			get_numstr_base.c \
 
 PRINTF_DIR	=	./ft_printf
 SRCS_PRINTF	= \
@@ -86,6 +85,7 @@ SRCS_STR	=	\
 	ft_strtol.c \
 	ft_strndup.c \
 	ft_strnlen.c \
+	get_numstr_base.c \
 
 OBJ_DIR	=	./obj
 OBJS	=	$(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
