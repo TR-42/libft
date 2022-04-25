@@ -6,7 +6,7 @@
 #    By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 06:23:32 by kfujita           #+#    #+#              #
-#    Updated: 2022/04/26 00:19:49 by kfujita          ###   ########.fr        #
+#    Updated: 2022/04/26 00:29:53 by kfujita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,12 +88,13 @@ SRCS04_DIR	=	./ft_lst
 PRINTF_DIR	=	./ft_printf
 FT_PUT_DIR	=	./ft_put
 STR_DIR		=	./ft_string
+FT_TO_DIR	=	./ft_to
 
 OBJ_DIR	=	./obj
 OBJS	=	$(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
 DEPS	=	$(addprefix $(OBJ_DIR)/, $(SRCS:.c=.d))
 
-VPATH	=	$(FT_IS_DIR):$(FT_MATH_DIR):$(FT_MEM_DIR):$(SRCS04_DIR):$(PRINTF_DIR):$(FT_PUT_DIR):$(STR_DIR)
+VPATH	=	$(FT_IS_DIR):$(FT_MATH_DIR):$(FT_MEM_DIR):$(SRCS04_DIR):$(PRINTF_DIR):$(FT_PUT_DIR):$(STR_DIR):$(FT_TO_DIR)
 
 CFLAGS	=	-Wall -Wextra -Werror -MMD
 

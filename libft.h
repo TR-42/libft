@@ -6,7 +6,7 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 13:37:46 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/26 00:25:47 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/26 00:29:25 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,8 @@
 // string
 # include "ft_string/ft_string.h"
 
-// Libft-01
-int		ft_toupper(int c);
-int		ft_tolower(int c);
+// ft_to*
+# include "ft_to/ft_to.h"
 
 // Additional Functions (from libc)
 

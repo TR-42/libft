@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_to.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/10 13:44:19 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/26 00:26:34 by kfujita          ###   ########.fr       */
+/*   Created: 2022/04/26 00:28:18 by kfujita           #+#    #+#             */
+/*   Updated: 2022/04/26 00:28:54 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include "ft_is/ft_is.h"
+#ifndef FT_TO_H
+# define FT_TO_H
 
-int	ft_toupper(int c)
-{
-	if (ft_islower(c))
-		return (c + ('A' - 'a'));
-	else
-		return (c);
-}
+// Libft-01
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+
+#endif

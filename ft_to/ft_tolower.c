@@ -6,12 +6,12 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 14:51:29 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/26 00:26:40 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/26 00:30:04 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include "ft_is/ft_is.h"
+#include "ft_to.h"
+#include "../ft_is/ft_is.h"
 
 int	ft_tolower(int c)
 {
