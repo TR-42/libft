@@ -6,15 +6,13 @@
 #    By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 06:23:32 by kfujita           #+#    #+#              #
-#    Updated: 2022/04/25 22:59:40 by kfujita          ###   ########.fr        #
+#    Updated: 2022/04/25 23:10:39 by kfujita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	libft.a
 
 SRCS	=	ft_atoi.c \
-			ft_isalnum.c \
-			ft_isdigit.c \
 			ft_memchr.c \
 			ft_memmove.c \
 			ft_putendl_fd.c \
@@ -25,8 +23,6 @@ SRCS	=	ft_atoi.c \
 			ft_strtrim.c \
 			ft_toupper.c \
 			ft_bzero.c \
-			ft_isalpha.c \
-			ft_isprint.c \
 			ft_memcmp.c \
 			ft_memset.c \
 			ft_putnbr_fd.c \
@@ -36,7 +32,6 @@ SRCS	=	ft_atoi.c \
 			ft_strrchr.c \
 			ft_substr.c \
 			ft_calloc.c \
-			ft_isascii.c \
 			ft_itoa.c \
 			ft_memcpy.c \
 			ft_putchar_fd.c \
@@ -46,6 +41,16 @@ SRCS	=	ft_atoi.c \
 			ft_strncmp.c \
 			ft_striteri.c \
 			ft_tolower.c \
+
+FT_IS_DIR	=	./ft_is
+FT_IS_SRCS	= \
+	ft_isalnum.c \
+	ft_isdigit.c \
+	ft_isalpha.c \
+	ft_isprint.c \
+	ft_isascii.c \
+	ft_isupper.c \
+	ft_islower.c \
 
 SRCS04_DIR	=	./ft_lst
 SRCS04	=	ft_lstnew.c \
@@ -63,8 +68,6 @@ SRCS_AD	=	ft_strtol.c \
 			ft_strnlen.c \
 			ft_min.c \
 			ft_max.c \
-			ft_isupper.c \
-			ft_islower.c \
 			get_numstr_base.c \
 
 PRINTF_DIR	=	./ft_printf
@@ -83,9 +86,12 @@ SRCS_PRINTF	= \
 
 OBJ_DIR	=	./obj
 OBJS	=	$(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
+OBJS_FT_IS	=	$(addprefix $(OBJ_DIR)/, $(FT_IS_SRCS:.c=.o))
 OBJS04	=	$(addprefix $(OBJ_DIR)/, $(SRCS04:.c=.o))
 OBJS_AD	=	$(addprefix $(OBJ_DIR)/, $(SRCS_AD:.c=.o))
 OBJS_PRINTF	=	$(addprefix $(OBJ_DIR)/, $(SRCS_PRINTF:.c=.o))
+
+OBJS_IN_LIBFT	=	$(OBJS) $(OBJS_FT_IS) $(OBJS04) $(OBJS_AD) $(OBJS_PRINTF)
 
 CFLAGS	=	-Wall -Wextra -Werror
 INCLUDES	=	-I ./ -I $(PRINTF_DIR)
@@ -96,10 +102,14 @@ MAKE_OBJ_CMD	=	$(CC) $(CFLAGS) $(INCLUDES) -c -o $@ $^
 
 all:	$(NAME)
 
-$(NAME):	$(OBJS) $(OBJS04) $(OBJS_AD) $(OBJS_PRINTF)
+$(NAME):	$(OBJS_IN_LIBFT)
 	ar r $@ $^
 
 $(OBJ_DIR)/%.o:	%.c
+	@mkdir -p $(OBJ_DIR)
+	$(MAKE_OBJ_CMD)
+
+$(OBJ_DIR)/%.o:	$(FT_IS_DIR)/%.c
 	@mkdir -p $(OBJ_DIR)
 	$(MAKE_OBJ_CMD)
 
@@ -114,7 +124,7 @@ $(OBJ_DIR)/%.o:	$(PRINTF_DIR)/%.c
 bonus:	$(NAME)
 
 clean:
-	rm -f $(OBJS) $(OBJS04) $(OBJS_AD) $(OBJS_PRINTF)
+	rm -f $(OBJS_IN_LIBFT)
 	rm -d $(OBJ_DIR) || exit 0
 
 fclean:	clean

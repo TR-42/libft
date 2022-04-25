@@ -6,9 +6,11 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 19:24:07 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/06 19:24:55 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/25 23:03:06 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_is.h"
 
 int	ft_isascii(int c)
 {

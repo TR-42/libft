@@ -6,7 +6,7 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 13:37:46 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/25 23:00:35 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/25 23:07:17 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@
 // - bool
 # include <stdbool.h>
 
+// ft_is*
+# include "ft_is/ft_is.h"
+
 // lst
 # include "ft_lst/ft_lst.h"
 
@@ -27,12 +30,6 @@
 # include "ft_printf/ft_printf.h"
 
 // Libft-00
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-
 size_t	ft_strlen(const char *s);
 
 void	*ft_memset(void *b, int c, size_t len);
@@ -87,9 +84,6 @@ void	ft_putnbr_fd(int n, int fd);
 // libft-04
 
 // Additional Functions (from libc)
-int		ft_islower(int c);
-int		ft_isupper(int c);
-
 long	ft_strtol(const char *str, char **endptr, int base);
 char	*ft_strndup(const char *s1, size_t n);
 size_t	ft_strnlen(const char *str, size_t max_len);
