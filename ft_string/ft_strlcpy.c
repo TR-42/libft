@@ -1,19 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/10 16:52:48 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/23 22:29:16 by kfujita          ###   ########.fr       */
+/*   Created: 2022/04/06 20:06:03 by kfujita           #+#    #+#             */
+/*   Updated: 2022/04/25 23:29:07 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include "libft.h"
+#include "ft_string.h"
 
-int	ft_atoi(const char *str)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	return ((int)ft_strtol(str, NULL, 10));
+	size_t	src_size;
+
+	src_size = ft_strlen(src);
+	if (size == 0)
+		return (src_size);
+	if ((src_size + 1) < size)
+		size = src_size + 1;
+	while (--size > 0)
+		*(dest++) = *(src++);
+	*dest = '\0';
+	return (src_size);
 }

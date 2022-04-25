@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/19 07:54:31 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/20 22:46:59 by kfujita          ###   ########.fr       */
+/*   Created: 2022/04/10 16:52:48 by kfujita           #+#    #+#             */
+/*   Updated: 2022/04/25 23:30:55 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-#include "libft.h"
+#include "ft_string.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+int	ft_atoi(const char *str)
 {
-	size_t	index;
-
-	if (s == NULL || f == NULL)
-		return ;
-	index = 0;
-	while (*s != '\0')
-		f(index++, s++);
+	return ((int)ft_strtol(str, NULL, 10));
 }

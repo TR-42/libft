@@ -6,12 +6,12 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 22:28:22 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/23 22:28:56 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/25 23:30:03 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <limits.h>
-#include "libft.h"
+#include "ft_string.h"
 
 static int	get_36based_value(char c)
 {

@@ -6,40 +6,24 @@
 #    By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 06:23:32 by kfujita           #+#    #+#              #
-#    Updated: 2022/04/25 23:19:59 by kfujita          ###   ########.fr        #
+#    Updated: 2022/04/25 23:35:59 by kfujita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	libft.a
 
-SRCS	=	ft_atoi.c \
-			ft_memchr.c \
+SRCS	=	ft_memchr.c \
 			ft_memmove.c \
 			ft_putendl_fd.c \
-			ft_split.c \
-			ft_strjoin.c \
-			ft_strlen.c \
-			ft_strnstr.c \
-			ft_strtrim.c \
 			ft_toupper.c \
 			ft_bzero.c \
 			ft_memcmp.c \
 			ft_memset.c \
 			ft_putnbr_fd.c \
-			ft_strchr.c \
-			ft_strlcat.c \
-			ft_strmapi.c \
-			ft_strrchr.c \
-			ft_substr.c \
 			ft_calloc.c \
-			ft_itoa.c \
 			ft_memcpy.c \
 			ft_putchar_fd.c \
 			ft_putstr_fd.c \
-			ft_strdup.c \
-			ft_strlcpy.c \
-			ft_strncmp.c \
-			ft_striteri.c \
 			ft_tolower.c \
 
 FT_IS_DIR	=	./ft_is
@@ -63,10 +47,7 @@ SRCS04	=	ft_lstnew.c \
 			ft_lstiter.c \
 			ft_lstmap.c \
 
-SRCS_AD	=	ft_strtol.c \
-			ft_strndup.c \
-			ft_strnlen.c \
-			ft_min.c \
+SRCS_AD	=	ft_min.c \
 			ft_max.c \
 			get_numstr_base.c \
 
@@ -84,16 +65,39 @@ SRCS_PRINTF	= \
 	parse_opt.c \
 	parse_opt_flags.c \
 
+STR_DIR		=	./ft_string
+SRCS_STR	=	\
+	ft_atoi.c \
+	ft_split.c \
+	ft_strjoin.c \
+	ft_strlen.c \
+	ft_strnstr.c \
+	ft_strtrim.c \
+	ft_strchr.c \
+	ft_strlcat.c \
+	ft_strmapi.c \
+	ft_strrchr.c \
+	ft_substr.c \
+	ft_itoa.c \
+	ft_strdup.c \
+	ft_strlcpy.c \
+	ft_strncmp.c \
+	ft_striteri.c \
+	ft_strtol.c \
+	ft_strndup.c \
+	ft_strnlen.c \
+
 OBJ_DIR	=	./obj
 OBJS	=	$(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
 OBJS_FT_IS	=	$(addprefix $(OBJ_DIR)/, $(FT_IS_SRCS:.c=.o))
 OBJS04	=	$(addprefix $(OBJ_DIR)/, $(SRCS04:.c=.o))
 OBJS_AD	=	$(addprefix $(OBJ_DIR)/, $(SRCS_AD:.c=.o))
 OBJS_PRINTF	=	$(addprefix $(OBJ_DIR)/, $(SRCS_PRINTF:.c=.o))
+OBJS_STR	=	$(addprefix $(OBJ_DIR)/, $(SRCS_STR:.c=.o))
 
-OBJS_IN_LIBFT	=	$(OBJS) $(OBJS_FT_IS) $(OBJS04) $(OBJS_AD) $(OBJS_PRINTF)
+OBJS_IN_LIBFT	=	$(OBJS) $(OBJS_FT_IS) $(OBJS04) $(OBJS_AD) $(OBJS_PRINTF) $(OBJS_STR)
 
-VPATH	=	$(FT_IS_DIR):$(SRCS04_DIR):$(PRINTF_DIR)
+VPATH	=	$(FT_IS_DIR):$(SRCS04_DIR):$(PRINTF_DIR):$(STR_DIR)
 
 CFLAGS	=	-Wall -Wextra -Werror
 INCLUDES	=	-I ./ -I $(PRINTF_DIR)

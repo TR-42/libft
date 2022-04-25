@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/19 07:47:01 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/19 08:08:36 by kfujita          ###   ########.fr       */
+/*   Created: 2022/04/10 16:50:25 by kfujita           #+#    #+#             */
+/*   Updated: 2022/04/25 23:29:28 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
+#include "ft_string.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	char	*p_ret;
-	size_t	index;
-
-	if (s == NULL || *s == '\0')
-		return (ft_strdup(""));
-	p_ret = ft_strdup(s);
-	if (f == NULL || p_ret == NULL)
-		return (p_ret);
-	index = 0;
-	while (*s != '\0')
+	if (n == 0)
+		return (0);
+	while (--n > 0 && *s1 == *s2 && *s1 != '\0')
 	{
-		p_ret[index] = f(index, *s++);
-		index++;
+		s1++;
+		s2++;
 	}
-	return (p_ret);
+	return (*((unsigned char *)s1) - *((unsigned char *)s2));
 }

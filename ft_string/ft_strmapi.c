@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/06 20:11:16 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/23 22:44:00 by kfujita          ###   ########.fr       */
+/*   Created: 2022/04/19 07:47:01 by kfujita           #+#    #+#             */
+/*   Updated: 2022/04/25 23:29:21 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_string.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	src_len;
-	size_t	dest_len;
+	char	*p_ret;
+	size_t	index;
 
-	dest_len = ft_strnlen(dest, size);
-	src_len = ft_strlen(src);
-	if (dest_len >= size)
-		return (size + src_len);
-	size -= dest_len;
-	dest += dest_len;
-	while (*src != '\0' && --size > 0)
-		*(dest++) = *(src++);
-	*dest = '\0';
-	return (src_len + dest_len);
+	if (s == NULL || *s == '\0')
+		return (ft_strdup(""));
+	p_ret = ft_strdup(s);
+	if (f == NULL || p_ret == NULL)
+		return (p_ret);
+	index = 0;
+	while (*s != '\0')
+	{
+		p_ret[index] = f(index, *s++);
+		index++;
+	}
+	return (p_ret);
 }

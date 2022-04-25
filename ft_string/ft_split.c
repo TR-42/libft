@@ -6,11 +6,11 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 05:36:53 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/23 22:45:09 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/25 23:27:43 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 #include <stdlib.h>
 
 static size_t	count_char(const char *s, char c)

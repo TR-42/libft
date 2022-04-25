@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnlen.c                                       :+:      :+:    :+:   */
+/*   get_numstr_base.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/23 22:43:26 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/23 22:44:16 by kfujita          ###   ########.fr       */
+/*   Created: 2022/04/23 02:10:07 by kfujita           #+#    #+#             */
+/*   Updated: 2022/04/25 23:34:34 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdbool.h>
 #include <stddef.h>
-#include "libft.h"
+#include "ft_string.h"
 
-size_t	ft_strnlen(const char *str, size_t max_len)
+int	get_numstr_base(char *buf, size_t num, int base, bool is_upper)
 {
-	size_t	len;
+	int		tmp;
+	int		last_len;
+	char	c;
 
-	len = 0;
-	while (len < max_len && *str != '\0')
-	{
-		str++;
-		len++;
-	}
-	return (len);
+	if (num == 0)
+		return (0);
+	last_len = get_numstr_base(buf, num / base, base, is_upper);
+	tmp = num % base;
+	if (tmp < 10)
+		c = '0' + tmp;
+	else if (is_upper)
+		c = 'A' + tmp - 10;
+	else
+		c = 'a' + tmp - 10;
+	buf[last_len] = c;
+	return (last_len + 1);
 }

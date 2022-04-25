@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/10 16:50:25 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/19 07:09:14 by kfujita          ###   ########.fr       */
+/*   Created: 2022/04/18 04:37:13 by kfujita           #+#    #+#             */
+/*   Updated: 2022/04/25 23:36:27 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-#include "libft.h"
+#include "../libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	if (n == 0)
-		return (0);
-	while (--n > 0 && *s1 == *s2 && *s1 != '\0')
-	{
-		s1++;
-		s2++;
-	}
-	return (*((unsigned char *)s1) - *((unsigned char *)s2));
+	if (s == NULL)
+		return (NULL);
+	if (len == 0 || ft_strlen(s) <= start)
+		return (ft_calloc(1, sizeof(char)));
+	return (ft_strndup(s + start, len));
 }
