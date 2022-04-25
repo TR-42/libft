@@ -6,7 +6,7 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 13:37:46 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/25 23:34:39 by kfujita          ###   ########.fr       */
+/*   Updated: 2022/04/25 23:40:23 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,6 @@
 // Dependency:
 // - size_t
 # include <stddef.h>
-
-// - bool
-# include <stdbool.h>
 
 // ft_is*
 # include "ft_is/ft_is.h"
