@@ -13,6 +13,10 @@
 #ifndef FT_MATH_H
 # define FT_MATH_H
 
+// Dependency:
+// - size_t
+# include <stddef.h>
+
 int		ft_min(int a, int b);
 long	ft_minl(long a, long b);
 size_t	ft_minp(size_t a, size_t b);
