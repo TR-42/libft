@@ -18,7 +18,7 @@ bool	vect_reserve(t_vect *vect, size_t newcap)
 {
 	void	*p_new;
 
-	if (vect->elemsize == 0 || vect->len < newcap)
+	if (vect->elemsize == 0 || newcap <= vect->len)
 		return (false);
 	if (newcap == 0)
 		p_new = NULL;
