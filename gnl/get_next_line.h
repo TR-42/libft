@@ -1,43 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/10 13:37:46 by kfujita           #+#    #+#             */
-/*   Updated: 2023/02/06 18:16:33 by kfujita          ###   ########.fr       */
+/*   Created: 2023/02/06 18:15:58 by kfujita           #+#    #+#             */
+/*   Updated: 2023/02/07 01:00:53 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-// Dependency:
-// ft_is*
-# include "ft_is/ft_is.h"
+// - bool
+# include <stdbool.h>
 
-// lst
-# include "ft_lst/ft_lst.h"
+// - ssize_t
+# include <sys/types.h>
 
-# include "ft_math/ft_math.h"
+typedef struct s_gnl_state
+{
+	int		fd;
+	char	*buf;
+	ssize_t	len;
+	ssize_t	cap;
+}	t_gnl_state;
 
-// memory
-# include "ft_mem/ft_mem.h"
+t_gnl_state	gen_gnl_state(int fd, ssize_t cap);
 
-// printf
-# include "ft_printf/ft_printf.h"
+void		dispose_gnl_state(t_gnl_state *state);
 
-// ft_put*
-# include "ft_put/ft_put.h"
-
-// string
-# include "ft_string/ft_string.h"
-
-// ft_to*
-# include "ft_to/ft_to.h"
-
-// Get Next Line
-# include "gnl/get_next_line.h"
+char		*get_next_line(t_gnl_state *state);
 
 #endif
