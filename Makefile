@@ -6,7 +6,7 @@
 #    By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 06:23:32 by kfujita           #+#    #+#              #
-#    Updated: 2023/02/06 23:04:41 by kfujita          ###   ########.fr        #
+#    Updated: 2023/02/07 00:23:06 by kfujita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -103,6 +103,9 @@ SRCS_VECT	= \
 	vect_reserve.c \
 	vect_set.c \
 
+SRCS_GNL	= \
+	get_next_line.c \
+
 SRCS	= \
 	$(SRCS_IS)\
 	$(SRCS_LST)\
@@ -113,6 +116,7 @@ SRCS	= \
 	$(SRCS_STRING)\
 	$(SRCS_TO)\
 	$(SRCS_VECT)\
+	$(SRCS_GNL)\
 
 FT_IS_DIR	=	./ft_is
 SRCS04_DIR	=	./ft_lst
@@ -123,6 +127,7 @@ FT_PUT_DIR	=	./ft_put
 STR_DIR		=	./ft_string
 FT_TO_DIR	=	./ft_to
 FT_VECT_DIR	=	./ft_vect
+GNL_DIR		=	./gnl
 
 OBJ_DIR	=	./obj
 OBJS	=	$(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
@@ -138,6 +143,7 @@ VPATH	=	\
 	:$(STR_DIR)\
 	:$(FT_TO_DIR)\
 	:$(FT_VECT_DIR)\
+	:$(GNL_DIR)\
 
 CFLAGS	=	-Wall -Wextra -Werror -MMD
 
