@@ -6,7 +6,7 @@
 #    By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 06:23:32 by kfujita           #+#    #+#              #
-#    Updated: 2023/02/06 22:51:07 by kfujita          ###   ########.fr        #
+#    Updated: 2023/02/06 22:52:06 by kfujita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,8 @@ SRCS_LST	= \
 	ft_lstsize.c \
 
 SRCS_MATH	= \
+	can_add.c \
+	can_mul.c \
 	ft_max.c \
 	ft_min.c \
 
