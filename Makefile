@@ -6,7 +6,7 @@
 #    By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 06:23:32 by kfujita           #+#    #+#              #
-#    Updated: 2023/02/06 22:52:06 by kfujita          ###   ########.fr        #
+#    Updated: 2023/02/06 23:04:41 by kfujita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -94,6 +94,7 @@ SRCS_TO	= \
 	ft_toupper.c \
 
 SRCS_VECT	= \
+	vect_append_range.c \
 	vect_at.c \
 	vect_dispose.c \
 	vect_init.c \
