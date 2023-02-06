@@ -6,7 +6,7 @@
 #    By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 06:23:32 by kfujita           #+#    #+#              #
-#    Updated: 2023/02/06 22:49:58 by kfujita          ###   ########.fr        #
+#    Updated: 2023/02/06 22:51:07 by kfujita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -125,7 +125,16 @@ OBJ_DIR	=	./obj
 OBJS	=	$(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
 DEPS	=	$(addprefix $(OBJ_DIR)/, $(SRCS:.c=.d))
 
-VPATH	=	$(FT_IS_DIR):$(FT_MATH_DIR):$(FT_MEM_DIR):$(SRCS04_DIR):$(PRINTF_DIR):$(FT_PUT_DIR):$(STR_DIR):$(FT_TO_DIR):$(FT_VECT_DIR)
+VPATH	=	\
+	$(FT_IS_DIR)\
+	:$(SRCS04_DIR)\
+	:$(FT_MATH_DIR)\
+	:$(FT_MEM_DIR)\
+	:$(PRINTF_DIR)\
+	:$(FT_PUT_DIR)\
+	:$(STR_DIR)\
+	:$(FT_TO_DIR)\
+	:$(FT_VECT_DIR)\
 
 CFLAGS	=	-Wall -Wextra -Werror -MMD
 
