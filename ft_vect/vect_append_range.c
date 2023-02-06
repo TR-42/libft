@@ -6,7 +6,7 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 19:12:30 by kfujita           #+#    #+#             */
-/*   Updated: 2023/02/06 23:56:59 by kfujita          ###   ########.fr       */
+/*   Updated: 2023/02/06 23:57:28 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static bool	vect_append_internal(
 	return (true);
 }
 
-bool	vect_append_range(t_vect *vect, void *value, size_t count)
+bool	vect_append_range(t_vect *vect, const void *value, size_t count)
 {
 	return (vect_append_internal(vect, value, count, g_flag_not_string));
 }

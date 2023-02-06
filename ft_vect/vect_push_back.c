@@ -6,13 +6,13 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 00:30:13 by kfujita           #+#    #+#             */
-/*   Updated: 2023/01/28 01:19:27 by kfujita          ###   ########.fr       */
+/*   Updated: 2023/02/06 23:58:04 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_vect.h"
 
-bool	vect_push_back(t_vect *vect, void *elem, size_t *written_index)
+bool	vect_push_back(t_vect *vect, const void *elem, size_t *written_index)
 {
 	size_t	index;
 
