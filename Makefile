@@ -6,7 +6,7 @@
 #    By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 06:23:32 by kfujita           #+#    #+#              #
-#    Updated: 2023/03/02 11:26:35 by kfujita          ###   ########.fr        #
+#    Updated: 2023/03/02 11:28:13 by kfujita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,6 +68,9 @@ SRCS_PUT	= \
 	ft_putnbr_fd.c \
 	ft_putstr_fd.c \
 
+SRCS_SORT	= \
+	ft_qsort.c
+
 SRCS_STRING	= \
 	ft_atoi_strict.c \
 	ft_atoi.c \
@@ -115,6 +118,7 @@ SRCS	= \
 	$(SRCS_MEM)\
 	$(SRCS_PRINTF)\
 	$(SRCS_PUT)\
+	$(SRCS_SORT)\
 	$(SRCS_STRING)\
 	$(SRCS_TO)\
 	$(SRCS_VECT)\
@@ -126,6 +130,7 @@ FT_MATH_DIR	=	./ft_math
 FT_MEM_DIR	=	./ft_mem
 PRINTF_DIR	=	./ft_printf
 FT_PUT_DIR	=	./ft_put
+SORT_DIR	=	./ft_sort
 STR_DIR		=	./ft_string
 FT_TO_DIR	=	./ft_to
 FT_VECT_DIR	=	./ft_vect
@@ -142,6 +147,7 @@ VPATH	=	\
 	:$(FT_MEM_DIR)\
 	:$(PRINTF_DIR)\
 	:$(FT_PUT_DIR)\
+	:$(SORT_DIR)\
 	:$(STR_DIR)\
 	:$(FT_TO_DIR)\
 	:$(FT_VECT_DIR)\
