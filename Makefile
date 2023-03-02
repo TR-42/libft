@@ -6,7 +6,7 @@
 #    By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 06:23:32 by kfujita           #+#    #+#              #
-#    Updated: 2023/03/02 11:25:53 by kfujita          ###   ########.fr        #
+#    Updated: 2023/03/02 11:26:35 by kfujita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,7 @@ SRCS_MEM	= \
 	ft_memcpy.c \
 	ft_memmove.c \
 	ft_memset.c \
+	ft_swap.c \
 
 SRCS_PRINTF	= \
 	check_no_opt_str.c \

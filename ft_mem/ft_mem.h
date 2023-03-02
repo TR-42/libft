@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_mem.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kfujita <kfujita@student.42.fr>            +#+  +:+       +#+        */
+/*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 23:39:01 by kfujita           #+#    #+#             */
-/*   Updated: 2023/01/28 00:41:54 by kfujita          ###   ########.fr       */
+/*   Updated: 2023/03/02 11:23:50 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,7 @@ void	*ft_calloc(size_t count, size_t size);
 
 // orig
 void	*ft_calloc_nofill(size_t count, size_t size);
+
+void	ft_swap(void *a, void *b, size_t bytes);
 
 #endif
