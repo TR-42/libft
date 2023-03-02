@@ -6,7 +6,7 @@
 #    By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 06:23:32 by kfujita           #+#    #+#              #
-#    Updated: 2023/02/07 00:23:06 by kfujita          ###   ########.fr        #
+#    Updated: 2023/03/02 11:25:53 by kfujita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,6 +68,7 @@ SRCS_PUT	= \
 	ft_putstr_fd.c \
 
 SRCS_STRING	= \
+	ft_atoi_strict.c \
 	ft_atoi.c \
 	ft_itoa.c \
 	ft_split.c \

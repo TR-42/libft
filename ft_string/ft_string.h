@@ -6,7 +6,7 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 23:23:12 by kfujita           #+#    #+#             */
-/*   Updated: 2022/04/25 23:36:18 by kfujita          ###   ########.fr       */
+/*   Updated: 2023/03/02 11:20:47 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 int		ft_atoi(const char *str);
+bool	ft_atoi_strict(const char *str, const char **endptr, int *dst);
 
 // Libft-02 (Libc functions)
 char	*ft_strdup(const char *s1);
