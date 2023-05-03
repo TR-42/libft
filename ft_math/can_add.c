@@ -6,13 +6,14 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 19:14:07 by kfujita           #+#    #+#             */
-/*   Updated: 2023/02/06 19:28:39 by kfujita          ###   ########.fr       */
+/*   Updated: 2023/05/03 19:35:16 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_math.h"
 
 #include <limits.h>
+#include <stdint.h>
 
 bool	can_add(int a, int b)
 {
@@ -41,5 +42,5 @@ bool	can_addl(long a, long b)
 
 bool	can_addp(size_t a, size_t b)
 {
-	return (b <= (SIZE_T_MAX - a));
+	return (b <= (UINTPTR_MAX - a));
 }

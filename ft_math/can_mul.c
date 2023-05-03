@@ -6,13 +6,14 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 19:29:25 by kfujita           #+#    #+#             */
-/*   Updated: 2023/05/03 19:03:13 by kfujita          ###   ########.fr       */
+/*   Updated: 2023/05/03 19:35:15 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_math.h"
 
 #include <limits.h>
+#include <stdint.h>
 
 bool	can_mul(int a, int b)
 {
@@ -51,5 +52,5 @@ bool	can_mulp(size_t a, size_t b)
 	if (a == 0 || b == 0)
 		return (true);
 	else
-		return (b <= (SIZE_T_MAX / a));
+		return (b <= (UINTPTR_MAX / a));
 }
